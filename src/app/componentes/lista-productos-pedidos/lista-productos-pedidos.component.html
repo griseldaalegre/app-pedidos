@@ -1,0 +1,28 @@
+<div class="container-list-task">
+    <table>
+        <thead>
+            <th>Productos</th>
+            <th>Cantidad</th>
+            <th>Precio Total</th>
+            <th>Acción</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let listaProd of datos.listaProd; let posicion = index;">
+                <td>
+                    {{listaProd?.nombreProducto}}
+                </td>
+                <td> <button class="boton-restar" (click)="restarProducto(posicion)">-</button>
+                    {{listaProd?.cantidad}}
+                    <button class="boton-sumar" (click)="sumarProducto(posicion)">+</button>
+                </td>
+                <td>
+                    {{listaProd?.cantidad * listaProd?.precio}}
+                </td>
+                <td>
+                    <button class="custom-button" (click)="deleteProd(posicion)">Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Total: <strong> {{ datos.importeTotal }} </strong></p>
+</div>

@@ -1,0 +1,13 @@
+<h1>{{tituloH1}}</h1>
+<h2>{{tituloH2}}</h2>
+<div class="container-card">
+  <div class="card" *ngFor="let producto of productos let posicion = index;"  >
+    <img src="../../../assets/{{producto.foto}}" class="card-img-top" alt="Imagen de la tarjeta">
+    <div class="card-body">
+      <h1 class="card-title">{{ producto.nombreProducto }}</h1>
+      <p class="card-text">{{ producto.descripcion }}</p>
+      <p class="card-text">{{ producto.precio }}</p>
+      <button type="submit" (click)="agregarProducto(posicion)">Agregar</button>
+    </div>
+  </div>
+</div>

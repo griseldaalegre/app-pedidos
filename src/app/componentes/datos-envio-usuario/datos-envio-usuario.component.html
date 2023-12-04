@@ -1,0 +1,25 @@
+<form id="formDatosUsuario">
+    <h2>Pagar</h2>
+    <label for="nombre">Nombre</label>
+    <input type="text" class="input-nombre" name="nombre" minlength="4" [(ngModel)]="nombre" required>
+    <label for="direcionPedido">Direccion</label>
+    <input type="text" class="input-direcion-pedido" name="direcionPedido" [(ngModel)]="direccion" required>
+
+    <h2>Medio de Pago</h2>
+    <label for="medioPago">Selecciona un medio de pago:</label>
+    <select id="medioPago" name="medioPago" (change)="onChange($event)" required>
+        <option value="" disabled selected>Selecciona una opción</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="debito">Tarjeta de Débito</option>
+        <option value="credito">Tarjeta de Credito</option>
+    </select>
+
+    <div [ngClass]="{'container-tarjeta-oculto': !esTarjeta, 'container-tarjeta-visible': esTarjeta}">
+        <h2>Número de Tarjeta</h2>
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" class="input-numero-tarjeta" name="numeroTarjeta" value="numeroTarjeta" [(ngModel)]="tarjeta"
+            required>
+    </div>
+    <p>Total: </p>
+    <button type="button" [disabled]="!nombre || !direccion" (click)="envioCreado($event)">Confirmar compra</button>
+</form>

@@ -1,0 +1,58 @@
+/* Estilo general para el formulario */
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 80vh; /* Establecer una altura máxima del 80% del alto de la ventana */
+  overflow-y: auto; 
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+.input-numero-tarjeta, .input-direcion-pedido, .input-nombre {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.container-tarjeta-oculto{
+    display: none;
+  }
+  
+  .container-tarjeta-visible{
+    display: flex;
+    flex-direction: column;
+  }

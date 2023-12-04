@@ -1,0 +1,10 @@
+.alerta-pedido-realizado {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    color: #333; /* Color de texto negro */
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc; /* Borde delgadp */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
